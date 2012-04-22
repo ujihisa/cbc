@@ -17,6 +17,7 @@ class GNUAssembler implements Assembler {
                             AssemblerOptions opts) throws IPCException {
         List<String> cmd = new ArrayList<String>();
         cmd.add("as");
+        cmd.add("--32");
         cmd.addAll(opts.args);
         cmd.add("-o");
         cmd.add(destPath);
